@@ -69,7 +69,7 @@ namespace ICE8A
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Button_Generate_Click(object sender, EventArgs e)
+        private void Button_Random_Click(object sender, EventArgs e)
         {
             foreach (var stat in PrimaryStatTextBoxes)
             {
