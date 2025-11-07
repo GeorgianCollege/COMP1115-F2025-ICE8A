@@ -123,5 +123,17 @@ namespace ICE8A
             return total;
         }
 
+        private void ComboBox_Career_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ComboBox_Career.SelectedIndex < 0) { return; }
+
+            for (int attribute = 0; attribute < PrimaryStatTextBoxes.Length; attribute++)
+            {
+                PrimaryStatTextBoxes[attribute].Text = CareerStats[ComboBox_Career.SelectedIndex][attribute].ToString();
+            }
+
+            ComputeSecondaryAttributes();
+
+        }
     }
 }

@@ -335,6 +335,7 @@
             ComboBox_Career.Name = "ComboBox_Career";
             ComboBox_Career.Size = new Size(268, 47);
             ComboBox_Career.TabIndex = 17;
+            ComboBox_Career.SelectedIndexChanged += ComboBox_Career_SelectedIndexChanged;
             // 
             // SelectionForm
             // 
