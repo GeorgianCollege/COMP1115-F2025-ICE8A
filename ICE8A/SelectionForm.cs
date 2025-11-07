@@ -25,7 +25,16 @@ namespace ICE8A
             TextBox_INT.Text = Roll5d10().ToString();
             TextBox_WIL.Text = Roll5d10().ToString();
 
+            ComputeSecondaryAttributes();
         }
+
+        private void ComputeSecondaryAttributes()
+        {
+            TextBox_AWA.Text = (Convert.ToInt32(TextBox_AGL.Text) + Convert.ToInt32(TextBox_PER.Text)).ToString();
+            TextBox_TOU.Text = (Convert.ToInt32(TextBox_STR.Text) + Convert.ToInt32(TextBox_VGR.Text)).ToString();
+            TextBox_RES.Text = (Convert.ToInt32(TextBox_INT.Text) + Convert.ToInt32(TextBox_WIL.Text)).ToString();
+        }
+
 
         /// <summary>
         /// This method rolls 5d10 and returns the total
