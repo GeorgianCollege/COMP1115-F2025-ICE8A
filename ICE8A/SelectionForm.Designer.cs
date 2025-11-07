@@ -191,7 +191,7 @@
             Button_Random.BackColor = SystemColors.HotTrack;
             Button_Random.Font = new Font("Calibri", 12F);
             Button_Random.ForeColor = SystemColors.ButtonHighlight;
-            Button_Random.Location = new Point(256, 726);
+            Button_Random.Location = new Point(250, 724);
             Button_Random.Name = "Button_Random";
             Button_Random.Size = new Size(170, 70);
             Button_Random.TabIndex = 12;
@@ -215,7 +215,7 @@
             Panel_PrimaryAttributes.Controls.Add(Label_VGR);
             Panel_PrimaryAttributes.Controls.Add(Label_STR);
             Panel_PrimaryAttributes.Controls.Add(Label_AGL);
-            Panel_PrimaryAttributes.Location = new Point(33, 256);
+            Panel_PrimaryAttributes.Location = new Point(27, 254);
             Panel_PrimaryAttributes.Name = "Panel_PrimaryAttributes";
             Panel_PrimaryAttributes.Size = new Size(618, 192);
             Panel_PrimaryAttributes.TabIndex = 13;
@@ -240,7 +240,7 @@
             Panel_SecondaryAttributes.Controls.Add(Label_RES);
             Panel_SecondaryAttributes.Controls.Add(Label_TOU);
             Panel_SecondaryAttributes.Controls.Add(Label_AWA);
-            Panel_SecondaryAttributes.Location = new Point(33, 463);
+            Panel_SecondaryAttributes.Location = new Point(27, 461);
             Panel_SecondaryAttributes.Name = "Panel_SecondaryAttributes";
             Panel_SecondaryAttributes.Size = new Size(347, 203);
             Panel_SecondaryAttributes.TabIndex = 14;
@@ -319,7 +319,7 @@
             // 
             TextBox_Name.BorderStyle = BorderStyle.FixedSingle;
             TextBox_Name.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TextBox_Name.Location = new Point(33, 45);
+            TextBox_Name.Location = new Point(27, 43);
             TextBox_Name.Name = "TextBox_Name";
             TextBox_Name.PlaceholderText = "Enter Your Name";
             TextBox_Name.Size = new Size(267, 47);
@@ -328,7 +328,7 @@
             // Label_SelectCareer
             // 
             Label_SelectCareer.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_SelectCareer.Location = new Point(33, 123);
+            Label_SelectCareer.Location = new Point(27, 121);
             Label_SelectCareer.Name = "Label_SelectCareer";
             Label_SelectCareer.Size = new Size(267, 39);
             Label_SelectCareer.TabIndex = 16;
@@ -340,7 +340,7 @@
             ComboBox_Career.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBox_Career.Font = new Font("Calibri", 12F);
             ComboBox_Career.FormattingEnabled = true;
-            ComboBox_Career.Location = new Point(32, 172);
+            ComboBox_Career.Location = new Point(26, 170);
             ComboBox_Career.Name = "ComboBox_Career";
             ComboBox_Career.Size = new Size(268, 47);
             ComboBox_Career.TabIndex = 17;
@@ -351,7 +351,7 @@
             CheckBox_ShowRandomButton.AutoSize = true;
             CheckBox_ShowRandomButton.Checked = true;
             CheckBox_ShowRandomButton.CheckState = CheckState.Checked;
-            CheckBox_ShowRandomButton.Location = new Point(351, 171);
+            CheckBox_ShowRandomButton.Location = new Point(345, 169);
             CheckBox_ShowRandomButton.Name = "CheckBox_ShowRandomButton";
             CheckBox_ShowRandomButton.Size = new Size(290, 36);
             CheckBox_ShowRandomButton.TabIndex = 18;
@@ -364,7 +364,7 @@
             GroupBox_Species.Controls.Add(RadioButton_Robot);
             GroupBox_Species.Controls.Add(RadioButton_Human);
             GroupBox_Species.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GroupBox_Species.Location = new Point(402, 463);
+            GroupBox_Species.Location = new Point(396, 461);
             GroupBox_Species.Name = "GroupBox_Species";
             GroupBox_Species.Size = new Size(249, 203);
             GroupBox_Species.TabIndex = 19;
@@ -410,7 +410,7 @@
             // 
             ResetButton.BackColor = Color.Orange;
             ResetButton.Font = new Font("Calibri", 12F);
-            ResetButton.Location = new Point(32, 726);
+            ResetButton.Location = new Point(26, 724);
             ResetButton.Name = "ResetButton";
             ResetButton.Size = new Size(170, 70);
             ResetButton.TabIndex = 20;
@@ -422,7 +422,7 @@
             Button_Submit.BackColor = Color.ForestGreen;
             Button_Submit.Font = new Font("Calibri", 12F);
             Button_Submit.ForeColor = SystemColors.ButtonHighlight;
-            Button_Submit.Location = new Point(480, 726);
+            Button_Submit.Location = new Point(474, 724);
             Button_Submit.Name = "Button_Submit";
             Button_Submit.Size = new Size(170, 70);
             Button_Submit.TabIndex = 21;
@@ -433,7 +433,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 841);
+            ClientSize = new Size(674, 829);
             Controls.Add(Button_Submit);
             Controls.Add(ResetButton);
             Controls.Add(GroupBox_Species);
@@ -444,7 +444,12 @@
             Controls.Add(Panel_PrimaryAttributes);
             Controls.Add(Panel_SecondaryAttributes);
             Controls.Add(Button_Random);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MaximumSize = new Size(700, 900);
+            MinimumSize = new Size(700, 900);
             Name = "SelectionForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SelectionForm";
             Panel_PrimaryAttributes.ResumeLayout(false);
             Panel_PrimaryAttributes.PerformLayout();
