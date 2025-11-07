@@ -12,11 +12,34 @@ namespace ICE8A
 
     public partial class SelectionForm : Form
     {
+        // Class Variables (member variables)
+
         Random random = new Random();
 
+        string[] Careers = Enum.GetNames<Career>();
+
+        int[][] CareerStats =
+        [
+            [35, 35, 30, 30, 25, 25], // Army
+            [30, 35, 30, 25, 35, 25], // Psion
+            [35, 30, 30, 35, 25, 25], // Rogue
+            [25, 30, 30, 35, 25, 35]  // Telepath
+        ];
+
+        // Declaring the PrimaryStatTextBoxes array
+        TextBox[] PrimaryStatTextBoxes;
+
+        // Declaring the SecondaryStatTextBoxes array
+        TextBox[] SecondaryStatTextBoxes;
+
+        /// <summary>
+        /// Constructor function - this triggers when the Form is created (Instantiated)
+        /// </summary>
         public SelectionForm()
         {
             InitializeComponent();
+
+
         }
 
         /// <summary>
