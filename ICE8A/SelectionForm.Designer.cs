@@ -331,7 +331,6 @@
             ComboBox_Career.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBox_Career.Font = new Font("Calibri", 12F);
             ComboBox_Career.FormattingEnabled = true;
-            ComboBox_Career.Items.AddRange(new object[] { "Army", "Psion", "Rogue", "Telepath" });
             ComboBox_Career.Location = new Point(32, 172);
             ComboBox_Career.Name = "ComboBox_Career";
             ComboBox_Career.Size = new Size(268, 47);
