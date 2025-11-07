@@ -45,12 +45,15 @@
             Label_PrimaryAttributes = new Label();
             Panel_SecondaryAttributes = new Panel();
             Label_SecondaryAttributes = new Label();
-            this.TextBox_RES = new TextBox();
-            this.TextBox_TOU = new TextBox();
-            this.TextBox_AWA = new TextBox();
-            this.Label_RES = new Label();
-            this.Label_TOU = new Label();
+            TextBox_RES = new TextBox();
+            TextBox_TOU = new TextBox();
+            TextBox_AWA = new TextBox();
+            Label_RES = new Label();
+            Label_TOU = new Label();
             Label_AWA = new Label();
+            TextBox_Name = new TextBox();
+            Label_SelectCareer = new Label();
+            ComboBox_Career = new ComboBox();
             Panel_PrimaryAttributes.SuspendLayout();
             Panel_SecondaryAttributes.SuspendLayout();
             SuspendLayout();
@@ -179,7 +182,7 @@
             // 
             Button_Generate.BackColor = SystemColors.ActiveCaption;
             Button_Generate.Font = new Font("Calibri", 12F);
-            Button_Generate.Location = new Point(59, 590);
+            Button_Generate.Location = new Point(65, 726);
             Button_Generate.Name = "Button_Generate";
             Button_Generate.Size = new Size(170, 70);
             Button_Generate.TabIndex = 12;
@@ -203,7 +206,7 @@
             Panel_PrimaryAttributes.Controls.Add(Label_VGR);
             Panel_PrimaryAttributes.Controls.Add(Label_STR);
             Panel_PrimaryAttributes.Controls.Add(Label_AGL);
-            Panel_PrimaryAttributes.Location = new Point(27, 120);
+            Panel_PrimaryAttributes.Location = new Point(33, 256);
             Panel_PrimaryAttributes.Name = "Panel_PrimaryAttributes";
             Panel_PrimaryAttributes.Size = new Size(618, 192);
             Panel_PrimaryAttributes.TabIndex = 13;
@@ -222,13 +225,13 @@
             // 
             Panel_SecondaryAttributes.BorderStyle = BorderStyle.FixedSingle;
             Panel_SecondaryAttributes.Controls.Add(Label_SecondaryAttributes);
-            Panel_SecondaryAttributes.Controls.Add(this.TextBox_RES);
-            Panel_SecondaryAttributes.Controls.Add(this.TextBox_TOU);
-            Panel_SecondaryAttributes.Controls.Add(this.TextBox_AWA);
-            Panel_SecondaryAttributes.Controls.Add(this.Label_RES);
-            Panel_SecondaryAttributes.Controls.Add(this.Label_TOU);
+            Panel_SecondaryAttributes.Controls.Add(TextBox_RES);
+            Panel_SecondaryAttributes.Controls.Add(TextBox_TOU);
+            Panel_SecondaryAttributes.Controls.Add(TextBox_AWA);
+            Panel_SecondaryAttributes.Controls.Add(Label_RES);
+            Panel_SecondaryAttributes.Controls.Add(Label_TOU);
             Panel_SecondaryAttributes.Controls.Add(Label_AWA);
-            Panel_SecondaryAttributes.Location = new Point(27, 327);
+            Panel_SecondaryAttributes.Location = new Point(33, 463);
             Panel_SecondaryAttributes.Name = "Panel_SecondaryAttributes";
             Panel_SecondaryAttributes.Size = new Size(347, 192);
             Panel_SecondaryAttributes.TabIndex = 14;
@@ -245,53 +248,53 @@
             // 
             // TextBox_RES
             // 
-            this.TextBox_RES.BorderStyle = BorderStyle.FixedSingle;
-            this.TextBox_RES.Font = new Font("Calibri", 12F);
-            this.TextBox_RES.Location = new Point(211, 111);
-            this.TextBox_RES.Name = "TextBox_RES";
-            this.TextBox_RES.Size = new Size(79, 47);
-            this.TextBox_RES.TabIndex = 8;
-            this.TextBox_RES.TextAlign = HorizontalAlignment.Center;
+            TextBox_RES.BorderStyle = BorderStyle.FixedSingle;
+            TextBox_RES.Font = new Font("Calibri", 12F);
+            TextBox_RES.Location = new Point(211, 111);
+            TextBox_RES.Name = "TextBox_RES";
+            TextBox_RES.Size = new Size(79, 47);
+            TextBox_RES.TabIndex = 8;
+            TextBox_RES.TextAlign = HorizontalAlignment.Center;
             // 
             // TextBox_TOU
             // 
-            this.TextBox_TOU.BorderStyle = BorderStyle.FixedSingle;
-            this.TextBox_TOU.Font = new Font("Calibri", 12F);
-            this.TextBox_TOU.Location = new Point(117, 111);
-            this.TextBox_TOU.Name = "TextBox_TOU";
-            this.TextBox_TOU.Size = new Size(79, 47);
-            this.TextBox_TOU.TabIndex = 7;
-            this.TextBox_TOU.TextAlign = HorizontalAlignment.Center;
+            TextBox_TOU.BorderStyle = BorderStyle.FixedSingle;
+            TextBox_TOU.Font = new Font("Calibri", 12F);
+            TextBox_TOU.Location = new Point(117, 111);
+            TextBox_TOU.Name = "TextBox_TOU";
+            TextBox_TOU.Size = new Size(79, 47);
+            TextBox_TOU.TabIndex = 7;
+            TextBox_TOU.TextAlign = HorizontalAlignment.Center;
             // 
             // TextBox_AWA
             // 
-            this.TextBox_AWA.BorderStyle = BorderStyle.FixedSingle;
-            this.TextBox_AWA.Font = new Font("Calibri", 12F);
-            this.TextBox_AWA.Location = new Point(23, 111);
-            this.TextBox_AWA.Name = "TextBox_AWA";
-            this.TextBox_AWA.Size = new Size(79, 47);
-            this.TextBox_AWA.TabIndex = 6;
-            this.TextBox_AWA.TextAlign = HorizontalAlignment.Center;
+            TextBox_AWA.BorderStyle = BorderStyle.FixedSingle;
+            TextBox_AWA.Font = new Font("Calibri", 12F);
+            TextBox_AWA.Location = new Point(23, 111);
+            TextBox_AWA.Name = "TextBox_AWA";
+            TextBox_AWA.Size = new Size(79, 47);
+            TextBox_AWA.TabIndex = 6;
+            TextBox_AWA.TextAlign = HorizontalAlignment.Center;
             // 
             // Label_RES
             // 
-            this.Label_RES.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            this.Label_RES.Location = new Point(211, 69);
-            this.Label_RES.Name = "Label_RES";
-            this.Label_RES.Size = new Size(79, 39);
-            this.Label_RES.TabIndex = 2;
-            this.Label_RES.Text = "RES";
-            this.Label_RES.TextAlign = ContentAlignment.MiddleCenter;
+            Label_RES.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            Label_RES.Location = new Point(211, 69);
+            Label_RES.Name = "Label_RES";
+            Label_RES.Size = new Size(79, 39);
+            Label_RES.TabIndex = 2;
+            Label_RES.Text = "RES";
+            Label_RES.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Label_TOU
             // 
-            this.Label_TOU.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            this.Label_TOU.Location = new Point(117, 69);
-            this.Label_TOU.Name = "Label_TOU";
-            this.Label_TOU.Size = new Size(79, 39);
-            this.Label_TOU.TabIndex = 1;
-            this.Label_TOU.Text = "TOU";
-            this.Label_TOU.TextAlign = ContentAlignment.MiddleCenter;
+            Label_TOU.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            Label_TOU.Location = new Point(117, 69);
+            Label_TOU.Name = "Label_TOU";
+            Label_TOU.Size = new Size(79, 39);
+            Label_TOU.TabIndex = 1;
+            Label_TOU.Text = "TOU";
+            Label_TOU.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Label_AWA
             // 
@@ -303,11 +306,45 @@
             Label_AWA.Text = "AWA";
             Label_AWA.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // TextBox_Name
+            // 
+            TextBox_Name.BorderStyle = BorderStyle.FixedSingle;
+            TextBox_Name.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TextBox_Name.Location = new Point(33, 45);
+            TextBox_Name.Name = "TextBox_Name";
+            TextBox_Name.PlaceholderText = "Enter Your Name";
+            TextBox_Name.Size = new Size(267, 47);
+            TextBox_Name.TabIndex = 15;
+            // 
+            // Label_SelectCareer
+            // 
+            Label_SelectCareer.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            Label_SelectCareer.Location = new Point(33, 123);
+            Label_SelectCareer.Name = "Label_SelectCareer";
+            Label_SelectCareer.Size = new Size(267, 39);
+            Label_SelectCareer.TabIndex = 16;
+            Label_SelectCareer.Text = "Select Career";
+            Label_SelectCareer.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // ComboBox_Career
+            // 
+            ComboBox_Career.DropDownStyle = ComboBoxStyle.DropDownList;
+            ComboBox_Career.Font = new Font("Calibri", 12F);
+            ComboBox_Career.FormattingEnabled = true;
+            ComboBox_Career.Items.AddRange(new object[] { "Army", "Psion", "Rogue", "Telepath" });
+            ComboBox_Career.Location = new Point(32, 172);
+            ComboBox_Career.Name = "ComboBox_Career";
+            ComboBox_Career.Size = new Size(268, 47);
+            ComboBox_Career.TabIndex = 17;
+            // 
             // SelectionForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(919, 724);
+            ClientSize = new Size(919, 841);
+            Controls.Add(ComboBox_Career);
+            Controls.Add(Label_SelectCareer);
+            Controls.Add(TextBox_Name);
             Controls.Add(Panel_PrimaryAttributes);
             Controls.Add(Panel_SecondaryAttributes);
             Controls.Add(Button_Generate);
@@ -318,6 +355,7 @@
             Panel_SecondaryAttributes.ResumeLayout(false);
             Panel_SecondaryAttributes.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -345,5 +383,8 @@
         private Label Label_TOU;
         private Label Label_RES;
         private Label Label_AWA;
+        private TextBox TextBox_Name;
+        private Label Label_SelectCareer;
+        private ComboBox ComboBox_Career;
     }
 }
