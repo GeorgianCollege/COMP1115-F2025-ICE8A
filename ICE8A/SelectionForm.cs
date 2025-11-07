@@ -71,12 +71,17 @@ namespace ICE8A
         /// <param name="e"></param>
         private void Button_Random_Click(object sender, EventArgs e)
         {
-            foreach (var stat in PrimaryStatTextBoxes)
-            {
-                stat.Text = Roll6d10DropLowest().ToString();
-            }
+            DialogResult result = MessageBox.Show("Random Generation is Destructive. Are you sure?", "Confirm Random Generation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-            ComputeSecondaryAttributes();
+            if (result == DialogResult.OK)
+            {
+                foreach (var stat in PrimaryStatTextBoxes)
+                {
+                    stat.Text = Roll6d10DropLowest().ToString();
+                }
+
+                ComputeSecondaryAttributes();
+            }
         }
 
         private void ComputeSecondaryAttributes()
@@ -122,6 +127,7 @@ namespace ICE8A
             }
             return total;
         }
+
 
         private void ComboBox_Career_SelectedIndexChanged(object sender, EventArgs e)
         {
