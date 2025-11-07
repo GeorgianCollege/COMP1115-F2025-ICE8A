@@ -39,6 +39,28 @@ namespace ICE8A
         {
             InitializeComponent();
 
+            // Populate the ComboBox with career options
+            ComboBox_Career.Items.Clear();
+            ComboBox_Career.Items.AddRange(Careers);
+
+            // Initialize the PrimaryStatTextBoxes array
+            PrimaryStatTextBoxes =
+            [
+                TextBox_AGL,
+                TextBox_STR,
+                TextBox_VGR,
+                TextBox_PER,
+                TextBox_INT,
+                TextBox_WIL
+            ];
+
+            // Initialize the SecondaryStatTextBoxes array
+            SecondaryStatTextBoxes =
+            [
+                TextBox_AWA,
+                TextBox_TOU,
+                TextBox_RES
+            ];
 
         }
 
@@ -49,12 +71,10 @@ namespace ICE8A
         /// <param name="e"></param>
         private void Button_Generate_Click(object sender, EventArgs e)
         {
-            TextBox_AGL.Text = Roll6d10DropLowest().ToString();
-            TextBox_STR.Text = Roll6d10DropLowest().ToString();
-            TextBox_VGR.Text = Roll6d10DropLowest().ToString();
-            TextBox_PER.Text = Roll6d10DropLowest().ToString();
-            TextBox_INT.Text = Roll6d10DropLowest().ToString();
-            TextBox_WIL.Text = Roll6d10DropLowest().ToString();
+            foreach (var stat in PrimaryStatTextBoxes)
+            {
+                stat.Text = Roll6d10DropLowest().ToString();
+            }
 
             ComputeSecondaryAttributes();
         }
